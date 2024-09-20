@@ -35,6 +35,10 @@ document.getElementById('addMoney-btn')
 
         const pinNumber = getInputFieldValueById('input_pin');
 
+        if(isNaN(addMoney)){
+            alert('please try again')
+            return;
+        }
         // validation
         if (pinNumber === 1234) {
             let balance = getInputFieldTextById('current-balance');
@@ -43,6 +47,10 @@ document.getElementById('addMoney-btn')
 
             document.getElementById('current-balance').innerText = newBalance
 
+            const p = document.createElement('p');
+            p.innerText = `Added: ${addMoney} Tk. Balance: ${newBalance}`
+
+            document.getElementById('transaction-container').appendChild(p)
         } else {
             alert('try again')
         }
