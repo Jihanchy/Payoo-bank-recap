@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main class="flex justify-center">
+    <main class="flex  justify-center">
         <!-- mockup phone -->
         <div class="mockup-phone">
             <div class="camera"></div>
@@ -30,15 +30,16 @@
                     <div class="divider"></div>
 
                     <!-- add/cash out btn -->
-                    <div class="flex gap-2">
-                        <button class="btn btn-lg">Add money</button>
-                        <button class="btn btn-lg">Cash out</button>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <button id="add-money-btn" class="btn btn-lg">Add money</button>
+                        <button id="cash-out-btn" class="btn btn-lg">Cash out</button>
+                        <button id="transaction-btn" class="btn btn-lg">Transactions</button>
                     </div>
 
                     <div class="divider"></div>
 
                     <!-- add money form start-->
-                    <div class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
+                    <div id="add-money-form" class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -55,14 +56,14 @@
                                     class="input input-bordered" required />
                             </div>
                             <div class="form-control mt-6">
-                                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                                <button id="addMoney-btn" class="btn btn-primary">Add Money</button>
                             </div>
                         </form>
                     </div>
                     <!-- add money  form  end-->
 
                     <!-- cash out form start -->
-                    <div class=" card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
+                    <div id="cash-out-form" class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -79,11 +80,16 @@
                                     autocomplete="off" class="input input-bordered" required />
                             </div>
                             <div class="form-control mt-6">
-                                <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                                <button id="cashOut-btn" class="btn btn-primary">Cash Out</button>
                             </div>
                         </form>
                     </div>
                     <!-- cash out form start end-->
+                    <!-- transaction section starts  -->
+                    <div id="transaction-section" class="hidden text-2xl">
+                        <h1>Transaction history</h1>
+                    </div>
+                    <!-- transaction section ends  -->
                 </div>
             </div>
         </div>
@@ -91,6 +97,7 @@
     <script src="js/utilities.js"></script>
     <script src="js/add-money.js"></script>
     <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>

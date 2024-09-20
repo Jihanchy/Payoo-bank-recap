@@ -27,7 +27,7 @@
 
 
 
-document.getElementById('add-money-btn')
+document.getElementById('addMoney-btn')
     .addEventListener('click', function (event) {
         event.preventDefault();
 

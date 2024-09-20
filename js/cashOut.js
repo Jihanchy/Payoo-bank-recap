@@ -1,4 +1,4 @@
-document.getElementById('cash-out-btn')
+document.getElementById('cashOut-btn')
     .addEventListener('click', function (event) {
         event.preventDefault();
 
