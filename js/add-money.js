@@ -28,22 +28,22 @@
 
 
 document.getElementById('add-money-btn')
-     .addEventListener('click', function(event){
-            event.preventDefault();
+    .addEventListener('click', function (event) {
+        event.preventDefault();
 
-            const addMoney  = getInputFieldValueById('amount-input');
+        const addMoney = getInputFieldValueById('amount-input');
 
-            const pinNumber = getInputFieldValueById('input_pin');
-            
-            // validation
-            if(pinNumber === 1234){
-                let balance = getInputFieldTextById('current-balance');
-                
-                let newBalance = balance + addMoney;
-                
-                document.getElementById('current-balance').innerText = newBalance
-                
-            }else{
-                alert('try again')
-            }
-     })
+        const pinNumber = getInputFieldValueById('input_pin');
+
+        // validation
+        if (pinNumber === 1234) {
+            let balance = getInputFieldTextById('current-balance');
+
+            let newBalance = balance + addMoney;
+
+            document.getElementById('current-balance').innerText = newBalance
+
+        } else {
+            alert('try again')
+        }
+    })
